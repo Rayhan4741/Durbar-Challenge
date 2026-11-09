@@ -1,0 +1,10 @@
+function formatCountdown(totalSeconds: number): string {
+  // TODO: Return formatted time string HH:MM:SS
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  const pad = (num: number): string => num.toString().padStart(2, '0');
+
+  return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+}
